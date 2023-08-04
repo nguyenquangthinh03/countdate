@@ -8,7 +8,7 @@ document.getElementById("date-2").valueAsDate = new Date();
 let timeDifference = date2.getTime() - date1.getTime();
 let diff = new Date(timeDifference)
 let yearDifference = diff.getFullYear() - 1970;
-let monthDifference = Math.abs(date2.getMonth() - date1.getMonth()) + yearDifference * 12;
+let monthDifference = diff.getMonth() ;
 let dayDifference =  Math.round(timeDifference / (1000 * 3600 * 24));
 
 // let dayDifference = Math.round(timeDifference / (1000 * 3600 * 24));
