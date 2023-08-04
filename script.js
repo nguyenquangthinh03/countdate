@@ -18,7 +18,7 @@ output.innerHTML = `Difference between the day is <span>${dayDifference}</span> 
 
 submit.addEventListener("click", () => {
   //Create a Date object from input value
-  if (document.getElementById("date-2").value !== null)
+      date1 = new Date(document.getElementById("date-1").value);
      date2 = new Date(document.getElementById("date-2").value);
   if (date1.getTime() && date2.getTime()) {
 
@@ -30,10 +30,6 @@ submit.addEventListener("click", () => {
     output.innerHTML = `Difference between the day is <span>${dayDifference}</span> days <br>
                          Difference between the month is <span>${monthDifference}</span> months <br>
                         Difference between the year is <span>${yearDifference}</span> years`;
-    
   }
 
-  else {
-    output.innerHTML = "Please select a valid date";
-  }
 });
